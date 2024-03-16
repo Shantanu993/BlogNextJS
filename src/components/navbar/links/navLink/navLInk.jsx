@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const NavLInk = ({ item }) => {
   return (
-    <Link href={item.path} key={item.path}>
-      {item.title} className={styles.navLink}
+    <Link href={item.path} key={item.path} className={styles.navLink}>
+      {item.title}
     </Link>
   );
 };
