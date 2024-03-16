@@ -24,7 +24,7 @@ const Links = () => {
   ];
 
   return (
-    <div>
+    <div className={styles.links}>
       {links.map((link) => (
         <NavLInk item={link} key={link.title} />
       ))}
