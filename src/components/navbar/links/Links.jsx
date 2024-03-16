@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import NavLInk from "./navLink/navLInk";
+import styles from "./links.module.css";
 
 const Links = () => {
   const links = [
