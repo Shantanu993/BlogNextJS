@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./navLink.module.css";
 import Link from "next/link";
@@ -9,9 +10,7 @@ const NavLInk = ({ item }) => {
     <Link
       href={item.path}
       key={item.path}
-      className={`${styles.navLink} ${
-        pathName === item.title && styles.active
-      }`}
+      className={`${styles.navLink} ${pathName === item.path && styles.active}`}
     >
       {item.title}
     </Link>
