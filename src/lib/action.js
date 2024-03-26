@@ -1,6 +1,19 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { Post } from "./models";
+import { connectToDb } from "./utils";
+
 export const addPost = async (formData) => {
-  "use server";
   const { title, desc, slug, userId } = Object.fromEntries(formData);
 
-  console.log(title, desc, slug, userId);
+  try {
+    connectToDb();
+    const newPost = new Post({ title, desc, slug, userId });
+    await newPost.save();
+    revalidatePath("/posts");
+  } catch (error) {
+    console.error(error);
+    return { error: "Something went wrong!" };
+  }
 };
