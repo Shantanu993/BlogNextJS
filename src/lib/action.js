@@ -11,7 +11,7 @@ export const addPost = async (formData) => {
     connectToDb();
     const newPost = new Post({ title, desc, slug, userId });
     await newPost.save();
-    revalidatePath("/posts");
+    revalidatePath("/blog");
   } catch (error) {
     console.error(error);
     return { error: "Something went wrong!" };
