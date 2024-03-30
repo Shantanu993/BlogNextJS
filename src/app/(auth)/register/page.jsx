@@ -1,7 +1,14 @@
-import React from "react";
+import styles from "./register.module.css";
+import RegisterForm from "@/components/registerForm/registerForm";
 
-const LoginPage = () => {
-  return <div>LoginPage</div>;
+const RegisterPage = () => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <RegisterForm />
+      </div>
+    </div>
+  );
 };
 
-export default LoginPage;
+export default RegisterPage;
