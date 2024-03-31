@@ -10,32 +10,32 @@
   gap: 50px;
 }
 
-.subtitle {
-  color: var(--btn);
+.subtitle{
+  color:var(--btn)
 }
 
-.title {
+.title{
   font-size: 54px;
 }
 
-.desc {
+.desc{
   font-size: 20px;
   font-weight: 300;
 }
 
-.boxes {
+.boxes{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.box {
+.box{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.box h1 {
+.box h1{
   color: var(--btn);
 }
 
@@ -44,7 +44,7 @@
   position: relative;
 }
 
-.img {
+.img{
   object-fit: contain;
 }
 
@@ -54,7 +54,7 @@
     text-align: center;
   }
 
-  .boxes {
+  .boxes{
     flex-direction: column;
     gap: 50px;
   }
