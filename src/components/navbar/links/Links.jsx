@@ -25,7 +25,7 @@ const links = [
   },
 ];
 
-const Links = ({ session }) => {
+const Links = ({session}) => {
   const [open, setOpen] = useState(false);
 
   // TEMPORARY
@@ -40,9 +40,7 @@ const Links = ({ session }) => {
         ))}
         {session?.user ? (
           <>
-            {session.user?.isAdmin && (
-              <NavLink item={{ title: "Admin", path: "/admin" }} />
-            )}
+            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
               <button className={styles.logout}>Logout</button>
             </form>
